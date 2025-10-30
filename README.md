@@ -19,6 +19,7 @@ A comprehensive Django REST Framework API for managing events, RSVPs, reviews, a
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
+   cd Event_Management-
    ```
 
 2. **Create virtual environment** (optional but recommended)
@@ -81,6 +82,8 @@ A comprehensive Django REST Framework API for managing events, RSVPs, reviews, a
 - `GET /api/events/?search={query}` - Search events by title, location, or organizer username
 
 ## Authentication Methods
+
+**Note:** After creating a superuser, users created via the `/api/register/` endpoint do not have staff status and cannot directly log into the Django admin panel. To grant admin access to a user, log in as the superuser and update the user's staff status in the admin interface.
 
 ### Method 1: Django Admin Login (Recommended for Testing)
 1. Go to `http://127.0.0.1:8000/admin/`
